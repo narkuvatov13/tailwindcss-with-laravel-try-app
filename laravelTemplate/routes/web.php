@@ -1,6 +1,6 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\denemeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('app');
-});
+    return view('welcome');
+})->name('welcome');
+
+
+Route::get("/deneme",[denemeController::class,'index'])->name('deneme.index');
